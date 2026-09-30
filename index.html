@@ -174,8 +174,8 @@
             <button onclick="switchTab('game1')" class="btn-green px-6 py-3 rounded-2xl text-white font-bold text-sm flex items-center gap-2 shadow-lg">
               <i class="fa-solid fa-gamepad"></i> Mainkan Soil Rescue
             </button>
-            <button onclick="openModal('materiModal')" class="btn-wood px-6 py-3 rounded-2xl text-amber-100 font-bold text-sm flex items-center gap-2">
-              <i class="fa-solid fa-book"></i> Baca Ringkasan Materi
+            <button onclick="switchTab('materi')" class="btn-wood px-6 py-3 rounded-2xl text-amber-100 font-bold text-sm flex items-center gap-2">
+              <i class="fa-solid fa-book"></i> Buka Materi Pembelajaran
             </button>
           </div>
         </div>
@@ -188,8 +188,8 @@
           <div class="w-12 h-12 bg-emerald-800/60 rounded-2xl border border-emerald-400 flex items-center justify-center text-emerald-300 text-2xl mb-4">
             <i class="fa-solid fa-layer-group"></i>
           </div>
-          <h3 class="font-display text-xl text-amber-300 mb-2">Horizon Tanah Hutan</h3>
-          <p class="text-xs text-emerald-200/80 leading-relaxed">Pelajari 5 lapisan utama tanah (O, A, B, C, R) serta fungsi vital mikroorganisme & kelembapan tanah.</p>
+          <h3 class="font-display text-xl text-amber-300 mb-2">Materi Pembelajaran</h3>
+          <p class="text-xs text-emerald-200/80 leading-relaxed">Klik untuk membuka modul dan berkas materi pembelajaran mandiri yang telah disediakan.</p>
         </div>
 
         <div onclick="switchTab('game1')" class="bg-emerald-950/60 border-2 border-emerald-700/50 hover:border-amber-400 p-6 rounded-3xl cursor-pointer transition-all hover:-translate-y-1">
@@ -211,54 +211,28 @@
       </div>
     </section>
 
-    <!-- 2. MATERI TAB -->
+    <!-- 2. MATERI TAB (KOSONG / CONTAINER PLACEHOLDER) -->
     <section id="sec-materi" class="tab-content hidden flex-col gap-6">
       <div class="bg-emerald-950/80 border-2 border-emerald-700/50 p-6 rounded-3xl space-y-6">
+        
         <div class="flex items-center justify-between border-b border-emerald-800 pb-4">
           <h2 class="font-display text-2xl text-amber-300 flex items-center gap-3">
-            <i class="fa-solid fa-book-bookmark text-emerald-400"></i> Modul Pembelajaran Tanah & Nutrisi
+            <i class="fa-solid fa-book-bookmark text-emerald-400"></i> Materi Pembelajaran
           </h2>
-          <span class="text-xs text-emerald-300 bg-emerald-900/80 px-3 py-1 rounded-full border border-emerald-600/40">Bab VII IPA SMP Class VIII</span>
+          <span class="text-xs text-emerald-300 bg-emerald-900/80 px-3 py-1 rounded-full border border-emerald-600/40">Area Konten Khusus</span>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          
-          <!-- Card 1: Horizon Tanah -->
-          <div class="bg-forest-dark/80 p-5 rounded-2xl border border-emerald-600/40 space-y-3">
-            <h3 class="font-display text-lg text-amber-200"><i class="fa-solid fa-align-left text-amber-400"></i> 1. Struktur Horizon Tanah Hutan</h3>
-            <ul class="text-xs text-emerald-100 space-y-2 leading-relaxed">
-              <li class="bg-soil-dark/60 p-2 rounded-lg border-l-4 border-amber-800">
-                <strong class="text-amber-300">Horizon O (Organik/Humus):</strong> Lapisan paling atas terdiri dari sisa daun, ranting, dan humus gembur.
-              </li>
-              <li class="bg-soil-dark/60 p-2 rounded-lg border-l-4 border-amber-700">
-                <strong class="text-amber-300">Horizon A (Topsoil):</strong> Tanah subur kaya mikroba, cacing, dan nutrisi utama tanaman.
-              </li>
-              <li class="bg-soil-dark/60 p-2 rounded-lg border-l-4 border-amber-600">
-                <strong class="text-amber-300">Horizon B (Subsoil):</strong> Lapisan tanah liat padat tempat pengendapan mineral.
-              </li>
-              <li class="bg-soil-dark/60 p-2 rounded-lg border-l-4 border-slate-600">
-                <strong class="text-amber-300">Horizon C & R (Bedrock):</strong> Batuan induk pelapukan dan batuan dasar yang sangat keras.
-              </li>
-            </ul>
+        <!-- CONTAINER KOSONG SIAP DIISI MATERI / FILE MANDIRI -->
+        <div id="materiContainer" class="min-h-[350px] border-2 border-dashed border-emerald-600/40 rounded-2xl flex flex-col items-center justify-center p-8 text-center bg-forest-dark/40 space-y-3">
+          <div class="w-16 h-16 bg-emerald-900/60 rounded-full border border-emerald-400 flex items-center justify-center text-emerald-300 text-3xl mb-1">
+            <i class="fa-solid fa-file-circle-plus"></i>
           </div>
-
-          <!-- Card 2: Nutrisi N-P-K -->
-          <div class="bg-forest-dark/80 p-5 rounded-2xl border border-emerald-600/40 space-y-3">
-            <h3 class="font-display text-lg text-amber-200"><i class="fa-solid fa-flask text-emerald-400"></i> 2. Unsur Nutrisi Esensial N-P-K</h3>
-            <ul class="text-xs text-emerald-100 space-y-2 leading-relaxed">
-              <li class="bg-emerald-900/50 p-2 rounded-lg border-l-4 border-emerald-400">
-                <strong class="text-emerald-300">N (Nitrogen):</strong> Memicu pertumbuhan daun hijau dan proses fotosintesis.
-              </li>
-              <li class="bg-sky-900/50 p-2 rounded-lg border-l-4 border-sky-400">
-                <strong class="text-sky-300">P (Phosphorus):</strong> Memperkuat pertumbuhan akar dan pembentukan bunga/buah.
-              </li>
-              <li class="bg-amber-900/50 p-2 rounded-lg border-l-4 border-amber-400">
-                <strong class="text-amber-300">K (Kalium):</strong> Meningkatkan ketahanan tanaman terhadap penyakit dan kekeringan.
-              </li>
-            </ul>
-          </div>
-
+          <h3 class="font-display text-xl text-amber-300">Container Materi Pembelajaran</h3>
+          <p class="text-xs text-emerald-200/70 max-w-md leading-relaxed">
+            Halaman materi ini sudah aktif dan dapat dipencet. Area di dalam tag <code class="bg-emerald-950 px-1.5 py-0.5 rounded text-amber-300 font-mono">#materiContainer</code> ini dapat Anda isi dengan teks HTML, gambar, PDF embed, maupun berkas materi Anda sendiri.
+          </p>
         </div>
+
       </div>
     </section>
 
